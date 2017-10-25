@@ -1,0 +1,20 @@
+{
+  "name": "noderoad",
+  "version": "1.0.0",
+  "description": "noderoad",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cancerpio/nodeRoad.git"
+  },
+  "author": "henry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cancerpio/nodeRoad/issues"
+  },
+  "homepage": "https://github.com/cancerpio/nodeRoad#readme"
+}
