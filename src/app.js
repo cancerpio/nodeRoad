@@ -5,21 +5,15 @@ function someAsyncOperation(callback) {
   fs.readFile('/path/to/file', callback);
 }
 
-const timeoutScheduled = Date.now();
-
+const timeoutScheduled = Date.now();          // <-先進行排程
 setTimeout(() => {
   const delay = Date.now() - timeoutScheduled;
-
   console.log(`${delay}ms have passed since I was scheduled`);
-}, 100);
+}, 1); // <- timeout設成1ms
 
+console.log('hahaha i still early 你看看你'); // <- 進行嘲諷
 
 // do someAsyncOperation which takes 95 ms to complete
 someAsyncOperation(() => {
-  const startCallback = Date.now();
-
-  // do something that will take 10ms...
-  while (Date.now() - startCallback < 10) {
-    // do nothing
-  }
+  //do nothing, about < 2ms 
 });
